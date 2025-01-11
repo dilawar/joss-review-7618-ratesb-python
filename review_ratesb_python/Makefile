@@ -1,7 +1,10 @@
-review: sanity_checks
+review: sanity_checks.py.run \
+	run_readme_complex_example.py.run
 
-sanity_checks: ./sanity_checks.py
+%.py.run: %.py
+	@echo "Executing $<"
 	uv run -s $<
+
 
 lint:
 	uv run ruff check 
