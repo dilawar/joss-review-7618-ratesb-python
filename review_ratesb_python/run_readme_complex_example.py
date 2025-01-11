@@ -3,7 +3,7 @@ from ratesb_python import Analyzer
 # Assuming `model` is your SBML or Antimony model
 analyzer = Analyzer("path/to/model.xml", "path/to/custom_classifications.json")
 # or:
-analyzer2 = Analyzer("S1->P1; k1 * S1") # custom classification file is optional
+analyzer2 = Analyzer("S1->P1; k1 * S1")  # custom classification file is optional
 
 # Analyze the model for rate law correctness
 analyzer.check_all()
