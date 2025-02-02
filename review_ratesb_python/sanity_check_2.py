@@ -10,11 +10,11 @@ print(analyzer.results)
 
 # Check selected errors and warnings
 analyzer.checks([1, 2, 1001, 1002])
-
-print(analyzer.results)
+results = analyzer.results
+print(results)
 
 # Display only warnings
-warnings = analyzer.results.get_all_warnings()
+warnings = results.get_warnings()
 for reaction, messages in warnings.items():
     print(reaction, messages)
 
